@@ -53,7 +53,7 @@ public class Player_move : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().gravityScale = 2;
             S_Down = false;
-            collider.isTrigger = false;
+            //collider.isTrigger = false;
         }
     }
     bool checkIsGrounded()
@@ -90,10 +90,10 @@ public class Player_move : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
-        if (collision.gameObject.tag == "Platform" && S_Down == true)
-        {
-            collider.isTrigger = true;
-        }
+        //if (collision.gameObject.tag == "Platform" && S_Down == true)
+        //{
+        //    collider.isTrigger = true;
+        //}
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -101,9 +101,9 @@ public class Player_move : MonoBehaviour
         //{
         //isGround = false;
         //}
-        if (collision.gameObject.tag == "Platform")
-        {
-            collider.isTrigger = false;
-        }
+        //if (collision.gameObject.tag == "Platform")
+        //{
+        //    collider.isTrigger = false;
+        //}
     }
 }
